@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.search-input-group {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.search-input {
+  border: none !important;
+}
+
+.search-input-group .input-group-text {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+}
+
+header .form-group {
+  margin-bottom: 0;
+}
+
+#user-dropdown {
+  text-decoration: none;
+  color: #232323;
+}
+
+#user-dropdown .user-image i {
+  font-size: 30px;
+}
+
+#user-dropdown .chevron-down i {
+  font-size: 12px;
+}
+
+.user-list .list-group-item a {
+  display: block;
+  text-decoration: none;
+  color: #232323;
+}
+
+.user-list .list-group-item a>i {
+  font-size: 20px;
+}
+
+.blockquote {
+  padding: 10px 15px;
+  font-size: 1rem !important;
+  border-left: 5px solid #eee;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.likes-dislikes-container {
+  margin-top: 30px;
+}
+
+.rating-container {
+  margin-top: 10px;
+}
+
+.rating-container .rate-heart {
+  padding: 0px 3px;
+}
+
+.rating-container .rate-heart i {
+  font-size: 20px;
+}
+
+.btn-send-message {
+  font-size: 0.75rem !important;
+}
+
+.user-img {
+  height: 100px;
+  width: 100px;
+}

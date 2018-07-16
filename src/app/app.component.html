@@ -1,0 +1,83 @@
+<div class="main-content">
+  <app-header (onSearch)="onSearch($event)"></app-header>
+  <div class="user-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4">
+          <ul class="list-group user-list">
+            <li class="list-group-item" *ngFor="let people of selectedPeoples; let i = index">
+              <a href="#" (click)="userClick(i)">
+                {{people.name}} <i class="fas fa-caret-right float-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-8" *ngIf="activePeople !== undefined">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="{{activePeople.img}}" class="rounded user-img">
+            </div>
+            <div class="col-sm-8">
+              <button type="button" class="btn btn-dark btn-send-message">SEND MESSAGE!</button>
+              <div class="rating-container">
+                <span class="rate-heart" *ngFor="let rating of ratings">
+                  <i [ngClass]="{'fas': rating.filled, 'far': !rating.filled}" class="fa-heart"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-10">
+            <div class="col-sm-12">
+              <blockquote class="blockquote">
+                {{activePeople.Description}}
+              </blockquote>
+            </div>
+          </div>
+          <div class="likes-dislikes-container">
+            <div class="row mt-10">
+              <div class="col-sm-6">
+                <table class="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Likes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let like of activePeople.Likes">
+                      <td>
+                        {{like}}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-sm-6">
+                <table class="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Dislikes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let dislike of activePeople.Dislikes">
+                      <td>
+                        {{dislike}}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #ratingFilled>
+    <i class="fas fa-heart"></i>
+  </ng-template>
+  <ng-template #ratingUnfilled>
+    <i class="far fa-heart"></i>
+  </ng-template>
+</div>

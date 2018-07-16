@@ -1,0 +1,49 @@
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <form>
+          <div class="form-group">
+            <div class="input-group mb-3 search-input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control search-input" aria-label="" (input)="onSearchChange($event.target.value)">
+              <div class="input-group-append">
+                <span class="input-group-text">
+                <span aria-hidden="true">&times;</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <div class="btn-group" dropdown>
+            <a href id="user-dropdown" dropdownToggle (click)="false" aria-controls="user-dropdown-dropdown">
+              <span class="user-name">
+              Peter Hoang &nbsp;
+            </span>
+              <span class="user-image">
+              <i class="fas fa-user"></i>&nbsp;
+            </span>
+              <span class="chevron-down">
+              <i class="fas fa-chevron-down"></i>
+              </span>
+            </a>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="button-basic">
+              <li role="menuitem"><a class="dropdown-item" href="#">My Profile</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Setitng</a></li>
+              <li class="divider dropdown-divider"></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
